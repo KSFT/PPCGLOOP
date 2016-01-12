@@ -15,6 +15,9 @@ def subprogram(p):
         if p[c:c+2]=="++":
             vars[var]=vars.get(var,0)+1
             c+=2
+        elif p[c:c+2]=="--":
+            vars[var]=vars.get(var,0)-1
+            c+=2
         elif p[c:c+3]==":=x":
             c+=3
             rightvar=""
